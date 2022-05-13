@@ -1,99 +1,176 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.8.1/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.8.1/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.8.1/firebase-performance-compat.js"></script>
-    <!-- 
+<head>
+  <!--home-->
+  <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Alfa+Slab+One&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Amaranth&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Angkor&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Nunito+Sans&amp;display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Titillium+Web:400,600,700">
+  <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+  <link rel="stylesheet" href="assets/css/Button-Change-Text-on-Hover.css">
+  <link rel="stylesheet" href="assets/css/Calender-Button.css">
+  <link rel="stylesheet" href="assets/css/Dark-NavBar-1.css">
+  <link rel="stylesheet" href="assets/css/Dark-NavBar-2.css">
+  <link rel="stylesheet" href="assets/css/Dark-NavBar.css">
+  <link rel="stylesheet" href="assets/css/Juvi---Push-Empty-Space-20px.css">
+  <link rel="stylesheet" href="assets/css/Navbar-Fixed-Side.css">
+  <link rel="stylesheet" href="assets/css/Navbar-Right-Links.css">
+  <link rel="stylesheet" href="assets/css/Pure-CSS-Drop-Down-Menu.css">
+  <link rel="stylesheet" href="assets/css/sidebar-1.css">
+  <link rel="stylesheet" href="assets/css/SIdebar-Responsive-2-1.css">
+  <link rel="stylesheet" href="assets/css/SIdebar-Responsive-2.css">
+  <link rel="stylesheet" href="assets/css/sidebar.css">
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <link rel="stylesheet" href="assets/css/Vertical-Left-SideBar-by-Jigar-Mistry.css">
+  <!--end-->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<!-- update the version number as needed -->
+<script defer src="/__/firebase/9.8.1/firebase-app-compat.js"></script>
+<!-- include only the Firebase features as you need -->
+<script defer src="/__/firebase/9.8.1/firebase-auth-compat.js"></script>
+<script defer src="/__/firebase/9.8.1/firebase-database-compat.js"></script>
+<script defer src="/__/firebase/9.8.1/firebase-firestore-compat.js"></script>
+<script defer src="/__/firebase/9.8.1/firebase-functions-compat.js"></script>
+<script defer src="/__/firebase/9.8.1/firebase-messaging-compat.js"></script>
+<script defer src="/__/firebase/9.8.1/firebase-storage-compat.js"></script>
+<script defer src="/__/firebase/9.8.1/firebase-analytics-compat.js"></script>
+<script defer src="/__/firebase/9.8.1/firebase-remote-config-compat.js"></script>
+<script defer src="/__/firebase/9.8.1/firebase-performance-compat.js"></script>
+<!-- 
       initialize the SDK after all desired features are loaded, set useEmulator to false
       to avoid connecting the SDK to running emulators.
     -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+<script defer src="/__/firebase/init.js?useEmulator=true"></script>
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-    <link rel="stylesheet" href="../CSS/common.css" <link rel="stylesheet" href="../CSS/homepage.css" />
-    <link rel="icon" href="../SOURCE/favicon.svg" ">
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const loadEl = document.querySelector('#load');
+    // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    // // The Firebase SDK is initialized and available here!
+    //
+    // firebase.auth().onAuthStateChanged(user => { });
+    // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
+    // firebase.firestore().doc('/foo/bar').get().then(() => { });
+    // firebase.functions().httpsCallable('yourFunction')().then(() => { });
+    // firebase.messaging().requestPermission().then(() => { });
+    // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
+    // firebase.analytics(); // call to activate
+    // firebase.analytics().logEvent('tutorial_completed');
+    // firebase.performance(); // call to activate
+    //
+    // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+  });
+</script>
+<!--main layout-->
+
+<body style="background: linear-gradient(rgb(255,255,255) 1%, var(--bs-blue) 48%, #ffffff), var(--bs-blue);">
+  <div>
+    <nav class="navbar navbar-light navbar-expand-md sticky-top navigation-clean-button"
+      style="height:80px;background-color:#37434d;color:#ffffff;">
+      <div class="container-fluid"><a class="navbar-brand" href="#">&nbsp;MALLOC.US</a><button data-bs-toggle="collapse"
+          class="navbar-toggler" data-bs-target="#navcol-1"><span class="visually-hidden">Toggle navigation</span><span
+            class="navbar-toggler-icon"></span></button>
+        <div class="collapse navbar-collapse" id="navcol-1">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" style="color:#ffffff;" href="index.html"><i
+                  class="fa fa-home"></i>&nbsp;Home</a></li>
+            <li class="nav-item"><a class="nav-link" style="color:#ffffff;" href="profile.html"><i
+                  class="fa fa-wpexplorer"></i>&nbsp;Profile</a></li>
+            <li class="nav-item"><a class="nav-link" style="color:#ffffff;" href="roadmap.html"><i
+                  class="fa fa-sort-amount-asc"></i>&nbsp;Roadmap</a></li>
+            <li class="nav-item"><a class="nav-link" style="color:#ffffff;" href="task.html"><i
+                  class="fa fa-calendar-plus-o"></i>Scheduler</a></li>
+            <li class="nav-item"><a class="nav-link text-center" style="color: #ffffff;" href="timeline.html"><i
+                  class="fa fa-line-chart"></i>Timeline</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h1 style="font-family: Amaranth, sans-serif;font-size: 19.88px;"><br><strong>ISSUES&nbsp; IN OUR
+            SOCIETY</strong><br><br><strong>Very less awareness about types of fields in the education industry. Kids
+            and teenagers often tend to explore based on what parents have shown them – &nbsp;without discovering what
+            piques their interest. As a chain reaction this causes low motivation and students do tend to learn things
+            without knowing background details. In worst case students might lose interest and get attracted towards
+            other field</strong><br><br><br><strong>SOLUTION&nbsp;</strong><br><br><strong>A group forum where we can
+            discuss stuffs and find people of similar interest Roadmaps that show all available opportunities in
+            different education fields Graphical timeline is also implemented which shows necessary stuff to be learned
+            with respect to age A task scheduler which automatically schedules and allocates time for the user once they
+            select a topic they wish to learn by heart</strong><br></h1>
+        <div class="Push-20"></div>
+      </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <div class="row">
+      <div class="col-md-3"><button class="btn btn-primary" type="button" style="text-align: center;"><a
+            href="timeline.html" style="text-align: center;">TIMELINE</a></button><span></span></div>
+      <div class="col-md-3"><button class="btn btn-primary" type="button" style="text-align: center;"><a
+            href="roadmap.html" style="text-align: center;">ROADMAP</a></button></div>
+      <div class="col-md-3"><button class="btn btn-primary" type="button" style="text-align: center;"><a
+            href="task.html" style="text-align: center;">SCHEDULER</a></button></div>
+      <div class="col-md-3"><button class="btn btn-primary" type="button" style="text-align: center;"><a
+            href="profile.html" style="text-align: center;">PROFILE</a></button></div>
+    </div>
+  </div>
+  <footer class="text-white bg-dark"></footer>
+  <div class="d-block" style="height: 60px;">
+    <div class="container" style="height: 60px;">
+      <div class="row" style="height: 60px;">
+        <div class="col-md-12" style="height: 60px;">
+          <div></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <footer class="text-white bg-dark">
+    <div class="container py-4 py-lg-5">
+      <div class="row justify-content-center">
+        <div class="col-sm-4 col-md-3 text-center text-lg-start d-flex flex-column item">
+          <ul class="list-unstyled">
+            <li></li>
+            <li></li>
+          </ul><a href="index.html" style="text-align: center;">HOME</a><a href="timeline.html"
+            style="text-align: center;">TIMELINE</a><a href="profile.html" style="text-align: center;">PROFILE</a><a
+            href="roadmap.html" style="text-align: center;">ROADMAP</a><a href="task.html"
+            style="text-align: center;">SCHEDULER</a>
+        </div>
+      </div>
+      <hr>
+    </div>
+  </footer>
+  <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+</body>
+<!--END-->
+<script>
+  const db = getDatabase();
+  function must() {
+    get(child(db, `fine`)).then((snapshot) => {
+      if (snapshot.exists()) {
+        console.log(snapshot.val());
+        console.log("hello");
+      } else {
+        console.log("No data available");
+      }
+    }).catch((error) => {
+      console.error(error);
+    });
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+    set(ref(db, 'fine'), {
+      username: "hello",
+      email: "email"
+    }
+    );
+  }
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
-        }
-      });
-  </script>
-      <ul>
-        <li>
-          <a href=" # ">
-            <i class="fa fa-facebook " aria-hidden="true "></i>
-            <span> - Facebook</span>
-          </a>
-        </li>
-      </ul>
-  </body>
+  must();
+</script>
+
 </html>
